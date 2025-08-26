@@ -1,0 +1,279 @@
+a{
+    color: black;
+    text-decoration: none;
+}
+
+/* Estilo para los enlaces cuando se pasa el cursor sobre ellos */
+a:hover{
+    color: white
+}
+
+/* Estilo para los enlaces después de haber sido visitados */
+/*a:visited{
+    color: black;
+    text-decoration: none;
+} */
+
+
+
+
+body {
+    background-image: url('Images/fondo.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat; 
+    position: relative;
+    z-index: 0; /* Establece contexto de apilamiento */
+    min-height: 100vh; /* Para cubrir la altura completa */
+    padding-left: 12%;   /* Espacio a la izquierda */
+    padding-right: 12%;  /* Espacio a la derecha */
+    line-height: 1.6;    /* Interlineado más cómodo */
+}
+
+/* Filtro oscuro sobre el fondo */
+body::before {
+    content: '';
+    position: fixed; /* Cubre toda la ventana aunque haya scroll */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Oscurecer un 50% */
+    z-index: -1; /* Debajo del contenido, pero encima del fondo */
+}
+
+@font-face {
+    font-family: 'OptimusPrincepsregular'; /* Nombre de la fuente */
+    src: url(Dark-Souls-Font/OptimusPrinceps.ttf) format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'OptimusPrincepsbold'; /* Nombre de la fuente */
+    src: url(Dark-Souls-Font/OptimusPrincepsSemiBold.ttf) format('truetype'); /* Ruta a la versión en semi-negrita */
+    font-weight: 600; /* semi-negrita */
+}
+
+
+/* Establecer el tamaño de pantalla de la pagina */
+
+html{
+    font-size: 16px;
+}
+
+
+h1 {
+    font-family: 'OptimusPrincepsbold'; 
+    font-weight: bold;
+    font-size: 5rem;
+    
+}
+
+ul{
+    font-family: 'OptimusPrincepsbold';
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.subtitulo{
+    font-family: 'OptimusPrincepsbold';
+    font-weight: bold;
+    font-size: 3rem;
+    color: #FF4500;
+
+}
+
+.subtitulo2{
+    font-family: 'OptimusPrincepsbold';
+    font-weight: bold;
+    font-size: 2rem;
+    color: #FF4500
+
+}
+
+.subtitulo3{
+    font-family: 'OptimusPrincepsbold';
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #FF4500
+
+}
+
+.subtitulo4{
+    font-family: 'OptimusPrincepsbold';
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #FF4500
+
+}
+
+.formula{
+    font-family: 'OptimusPrincepsbold';
+    font-weight: bold;
+    font-size: 1.25rem;
+
+}
+
+.parrafo {
+    font-family: 'OptimusPrincepsregular'; 
+    font-weight: normal;
+    font-size: 1rem;
+    color: #d3b4b4; /* Texto claro */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+footer{
+    font-family: 'OptimusPrincepsregular'; 
+    color: white; /* Texto blanco */
+    position: relative; /* Si deseas que el footer no se mueva con el scroll */
+    font-size: 1rem; /* Tamaño de la fuente */
+    width: 100%; /* Asegura que el footer ocupe el ancho completo */
+    bottom: 0; /* Para asegurarte que el footer quede al final */
+    text-align: center; /* Alineación centrada */
+    padding: 20px; /* Espaciado alrededor del contenido */
+}
+
+.class bonon{
+    font-family: 'OptimusPrincepsregular'; 
+        font-weight: normal;
+    font-size: 1rem;
+}
+
+@media (max-width:768px) { /* Se aplica a pantallas con un ancho máximo de 768px (tabletas y móviles) */
+    
+    html {
+        font-size: 14px;  /* Reducir tamaño base a 14px en pantallas pequeñas */
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    ul{
+        font-size: 1rem;
+    }
+
+    .subtitulo{
+        font-size: 3rem;
+    }
+
+    .subtitulo2{
+        font-size: 2rem;
+    }
+
+    .parrafo {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width:480px) { /* Se aplica a pantallas con un ancho máximo de 480px */
+    
+    html {
+        font-size: 8px;  /* Reducir tamaño base a 14px en pantallas pequeñas */
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    ul{
+        font-size: 1rem;
+    }
+
+    .subtitulo{
+        font-size: 3rem;
+    }
+
+    .subtitulo2{
+        font-size: 2rem;
+    }
+
+    .parrafo {
+        font-size: 1rem;
+    }
+
+}
+
+.botones-de-compra {
+        display: flex;
+        align-items: center;
+        gap: 100px;
+}
+
+.imagenes {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden; /* ocultar scroll vertical */
+    scrollbar-width: thin;
+    gap: 10px;
+    padding: 10px;
+    scroll-snap-type: mandatory; /* para que las imagenes se quedan pegadas al scroll */
+}
+
+.imagenes img{
+    width: 450px;
+    height: 350px;
+    object-fit: cover; /* recorta la imagen para que encaje sin deformarse */
+    margin: 5px; /* margen de separacion entre imagenes */
+    scroll-snap-align: start;
+    border-radius: 8px; /* para suavizar los bordes */
+}
+
+
+.imagenes {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 10px;
+  padding: 10px;
+}
+
+.imagenes img:hover {
+  transform: scale(1.1);   /* Agranda la imagen un 10% */
+  transition: transform 0.6s ease;  /* Transición suave */
+  z-index: 10;              /* Para que se superponga sobre las otras imágenes */
+  cursor: pointer;          /* Cambia el cursor para indicar que es clickeable */
+}
+
+/* Ocultamos los radio buttons, solo usaremos las etiquetas label como pestañas */
+.tabs input {
+  display: none;
+}
+
+/* Estilos básicos para las pestañas (labels) */
+.tabs label {
+  font-family: 'OptimusPrincepsregular'; 
+  display: inline-block;
+  padding: 10px 20px;
+  background: #2b2b2b;
+  cursor: pointer;
+  margin-right: 5px;
+  border-radius: 5px 5px 0 0;
+  border: none;
+}
+
+/* Cambiamos el color cuando está activa la pestaña */
+#clase1:checked + label,
+#clase2:checked + label,
+#clase3:checked + label {
+  background: #3a3225;
+  color: #fff;
+}
+
+/* Ocultamos todos los contenidos por defecto */
+.contenidoo {
+  display: none;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+/* Mostramos solo el contenido correspondiente al radio seleccionado */
+#clase1:checked ~ #contenido1,
+#clase2:checked ~ #contenido2,
+#clase3:checked ~ #contenido3 {
+  display: block;
+}
