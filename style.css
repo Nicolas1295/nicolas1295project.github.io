@@ -276,4 +276,9 @@ footer{
 #clase2:checked ~ #contenido2,
 #clase3:checked ~ #contenido3 {
   display: block;
+
 }
+
+        td {
+            text-align: center;
+        }
