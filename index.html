@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
 
@@ -26,21 +27,29 @@
     </header>
 
     <main>
+        <div id="overlay"></div>
+
         <h2 class="subtitulo">Bienvenido a la fan page no oficial de Dark Souls III</h2>
 
         <p class="parrafo">
             A medida que las llamas se apagan y el mundo cae en la ruina, el desarrollador FROMSOFTWARE
-             y el director Hidetaka Miyazaki continúan su aclamada y definitoria serie con Dark Souls III.
-              Tanto los fanáticos como los nuevos jugadores se perderán en la jugabilidad desafiante y
-               gratificante característica del juego, así como en sus gráficos inmersivos. Ahora, solo quedan las brasas…
+            y el director Hidetaka Miyazaki continúan su aclamada y definitoria serie con Dark Souls III.
+            Tanto los fanáticos como los nuevos jugadores se perderán en la jugabilidad desafiante y
+            gratificante característica del juego, así como en sus gráficos inmersivos. Ahora, solo quedan las brasas…
 
             Dark Souls III es un juego de rol de acción exigente que se desarrolla en un mundo de fantasía
-             oscura apocalíptica, donde una gran variedad de mazmorras y monstruos esperan a los jugadores.
-              El juego se enfoca en los fundamentos del entretenimiento de un RPG, como la exploración,
-               el descubrimiento, el miedo y la sensación de logro. Las “Artes de Armas” permiten al
-                jugador realizar ataques especiales que varían según el arma, haciendo que los combates
-                 se enfoquen más en la táctica.</p>
+            oscura apocalíptica, donde una gran variedad de mazmorras y monstruos esperan a los jugadores.
+            El juego se enfoca en los fundamentos del entretenimiento de un RPG, como la exploración,
+            el descubrimiento, el miedo y la sensación de logro. Las “Artes de Armas” permiten al
+            jugador realizar ataques especiales que varían según el arma, haciendo que los combates
+            se enfoquen más en la táctica.
+        </p>
 
+        <img src="Images/bonfire.gif" id="bonfire">
+        <br>
+        <button onclick="encender()" class="bonon">Encender la era de fuego</button>
+        <button onclick="apagar()" class="bonon">Apagar la era de fuego</button>
+        <br>
         <h3 class="subtitulo3">📬 Contáctanos</h3>
         <form action="#" method="get" >
 
@@ -71,26 +80,10 @@
         <p>Fanpage no oficial de Dark Souls III | Todos los derechos pertenecen a FromSoftware y Bandai Namco.</p>
     </footer>
 
-<!--To do list
-agregar imagenes
-agregar tablas
-5. Carrousel o Slider (para imágenes o contenido destacable):
-Resumen de elementos recomendados:
 
-Botones para interacciones como descargar, enviar formularios, etc.
 
-Formularios para contacto, registros o suscripciones.
-
-Tablas para organizar y mostrar información de manera clara.
-agregar musica
-agregar mapa
-agregar videos
-
-Íconos para redes sociales o acciones.
-
-Slider/Carrousel para mostrar imágenes o contenido destacado.
-
-Otros elementos como modales, tooltips, paginación, contadores, etc. -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 
 </html>
